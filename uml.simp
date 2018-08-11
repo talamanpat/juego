@@ -1,0 +1,626 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<sim-project version="4.97">
+  <meta>
+    <name>juego</name>
+    <authors />
+    <description />
+  </meta>
+  <management>
+    <persons />
+    <tasks />
+    <requirements />
+    <issues />
+    <to-dos />
+  </management>
+  <types>
+    <type-sets>
+      <type-set file="UmlTypes.xml" />
+    </type-sets>
+    <custom-types>
+      <type id="Dibujable[]" name="Dibujable[]" description="" />
+      <type id="Ball" name="Ball" description="" />
+      <type id="EtapaState" name="EtapaState" description="" />
+    </custom-types>
+  </types>
+  <items>
+    <item id="di414126282262959126" cid="C001" type="class" name="Ball" style-class="" is-abstract="false">
+      <stereotypes />
+      <tagged-values />
+      <documentation />
+      <associated-diagrams />
+      <owned-items />
+      <style class="default" />
+      <attributes>
+        <attribute id="" name="dX" type="Integer" type-id="Uml.Integer" visibility="private" abstract="false" virtual="false" default-value="">
+          <stereotypes />
+          <documentation />
+        </attribute>
+        <attribute id="" name="dY" type="Integer" type-id="Uml.Integer" visibility="private" abstract="false" virtual="false" default-value="">
+          <stereotypes />
+          <documentation />
+        </attribute>
+        <attribute id="" name="style" type="String" type-id="Uml.String" visibility="private" abstract="false" virtual="false" default-value="">
+          <stereotypes />
+          <documentation />
+        </attribute>
+      </attributes>
+      <operations />
+      <template-parameters />
+    </item>
+    <item id="di597820857330988183" cid="C002" type="class" name="Dibujable" style-class="" is-abstract="true">
+      <stereotypes />
+      <tagged-values />
+      <documentation>{\rtf1\ansi\ansicpg1252\deff0\deflang13322{\fonttbl{\f0\fnil\fcharset0 Microsoft Sans Serif;}}
+{\colortbl ;\red70\green70\blue70;}
+\viewkind4\uc1\pard\cf1\f0\fs17\par
+}
+</documentation>
+      <associated-diagrams />
+      <owned-items />
+      <style class="default" />
+      <attributes>
+        <attribute id="" name="x" type="Integer" type-id="Uml.Integer" visibility="private" abstract="false" virtual="false" default-value="">
+          <stereotypes />
+          <documentation />
+        </attribute>
+        <attribute id="" name="y" type="Integer" type-id="Uml.Integer" visibility="private" abstract="false" virtual="false" default-value="">
+          <stereotypes />
+          <documentation />
+        </attribute>
+      </attributes>
+      <operations>
+        <operation id="" name="Dibuja" type="" type-id="" visibility="public" abstract="false" virtual="false" static="false">
+          <parameters />
+          <stereotypes />
+          <documentation />
+        </operation>
+        <operation id="" name="Mover" type="" type-id="" visibility="public" abstract="false" virtual="false" static="false">
+          <parameters>
+            <parameter id="" name="x" type="" type-id="" default-value="">
+              <documentation />
+            </parameter>
+            <parameter id="" name="y" type="" type-id="" default-value="">
+              <documentation />
+            </parameter>
+          </parameters>
+          <stereotypes />
+          <documentation />
+        </operation>
+      </operations>
+      <template-parameters />
+    </item>
+    <item id="di775903381794213648" cid="C003" type="class" name="Pizarra" style-class="" is-abstract="false">
+      <stereotypes />
+      <tagged-values />
+      <documentation />
+      <associated-diagrams />
+      <owned-items />
+      <style class="default" />
+      <attributes>
+        <attribute id="" name="hijos" type="Dibujable[]" type-id="Dibujable[]" visibility="private" abstract="false" virtual="false" default-value="">
+          <stereotypes />
+          <documentation />
+        </attribute>
+      </attributes>
+      <operations>
+        <operation id="" name="Agregar" type="" type-id="" visibility="public" abstract="false" virtual="false" static="false">
+          <parameters>
+            <parameter id="" name="dibujable" type="" type-id="" default-value="">
+              <documentation />
+            </parameter>
+          </parameters>
+          <stereotypes />
+          <documentation />
+        </operation>
+        <operation id="" name="Quitar" type="" type-id="" visibility="public" abstract="false" virtual="false" static="false">
+          <parameters>
+            <parameter id="" name="dibujable" type="" type-id="" default-value="">
+              <documentation />
+            </parameter>
+          </parameters>
+          <stereotypes />
+          <documentation />
+        </operation>
+        <operation id="" name="Limites" type="" type-id="" visibility="private" abstract="false" virtual="false" static="false">
+          <parameters>
+            <parameter id="" name="ball" type="" type-id="" default-value="">
+              <documentation />
+            </parameter>
+          </parameters>
+          <stereotypes />
+          <documentation />
+        </operation>
+      </operations>
+      <template-parameters />
+    </item>
+    <item id="di276869083361352666" cid="C004" type="class" name="Player" style-class="" is-abstract="false">
+      <stereotypes />
+      <tagged-values />
+      <documentation />
+      <associated-diagrams />
+      <owned-items />
+      <style class="default" />
+      <attributes>
+        <attribute id="" name="d" type="" type-id="" visibility="private" abstract="false" virtual="false" default-value="">
+          <stereotypes />
+          <documentation />
+        </attribute>
+        <attribute id="" name="w" type="" type-id="" visibility="private" abstract="false" virtual="false" default-value="">
+          <stereotypes />
+          <documentation />
+        </attribute>
+        <attribute id="" name="puntos" type="" type-id="" visibility="public" abstract="false" virtual="false" default-value="">
+          <stereotypes />
+          <documentation />
+        </attribute>
+      </attributes>
+      <operations>
+        <operation id="" name="WhatKey" type="" type-id="" visibility="public" abstract="false" virtual="false" static="false">
+          <parameters>
+            <parameter id="" name="evt" type="" type-id="" default-value="">
+              <documentation />
+            </parameter>
+          </parameters>
+          <stereotypes />
+          <documentation />
+        </operation>
+      </operations>
+      <template-parameters />
+    </item>
+    <item id="di684747533129171721" cid="GNR001" type="generalization" name="" style-class="" is-abstract="false">
+      <stereotypes />
+      <tagged-values />
+      <documentation />
+      <associated-diagrams />
+      <owned-items />
+      <style class="default" />
+    </item>
+    <item id="di535383740394008458" cid="GNR002" type="generalization" name="" style-class="" is-abstract="false">
+      <stereotypes />
+      <tagged-values />
+      <documentation />
+      <associated-diagrams />
+      <owned-items />
+      <style class="default" />
+    </item>
+    <item id="di347830371475420305" cid="GNR003" type="generalization" name="" style-class="" is-abstract="false">
+      <stereotypes />
+      <tagged-values />
+      <documentation />
+      <associated-diagrams />
+      <owned-items />
+      <style class="default" />
+    </item>
+    <item id="di786542138504730757" cid="REL001" type="relationship" name="" style-class="" is-abstract="false">
+      <stereotypes />
+      <tagged-values />
+      <documentation>{\rtf1\ansi\ansicpg1252\deff0\deflang13322{\fonttbl{\f0\fnil\fcharset0 Microsoft Sans Serif;}}
+{\colortbl ;\red70\green70\blue70;}
+\viewkind4\uc1\pard\cf1\f0\fs17\par
+}
+</documentation>
+      <associated-diagrams />
+      <owned-items />
+      <style class="default" />
+      <relation from="di597820857330988183" to="di775903381794213648">
+        <start-role id="" name="" multiplicity="" navigability="yes" association-type="association" visibility="private" />
+        <end-role id="" name="" multiplicity="" navigability="" association-type="aggregation" visibility="private" />
+      </relation>
+    </item>
+    <item id="di603816761721277373" cid="C005" type="class" name="Ejecutable" style-class="" is-abstract="false">
+      <stereotypes />
+      <tagged-values />
+      <documentation />
+      <associated-diagrams />
+      <owned-items />
+      <style class="default" />
+      <attributes />
+      <operations />
+      <template-parameters />
+    </item>
+    <item id="di977149463773439850" cid="C006" type="class" name="BallFactory" style-class="" is-abstract="false">
+      <stereotypes>
+        <stereotype name="static" />
+      </stereotypes>
+      <tagged-values />
+      <documentation>{\rtf1\ansi\ansicpg1252\deff0\deflang13322{\fonttbl{\f0\fnil\fcharset0 Microsoft Sans Serif;}}
+{\colortbl ;\red70\green70\blue70;}
+\viewkind4\uc1\pard\cf1\f0\fs17\par
+}
+</documentation>
+      <associated-diagrams />
+      <owned-items />
+      <style class="default" />
+      <attributes />
+      <operations>
+        <operation id="" name="GetBall1" type="Ball" type-id="Ball" visibility="public" abstract="false" virtual="false" static="false">
+          <parameters />
+          <stereotypes />
+          <documentation />
+        </operation>
+        <operation id="" name="GetBall2" type="Ball" type-id="Ball" visibility="public" abstract="false" virtual="false" static="false">
+          <parameters />
+          <stereotypes />
+          <documentation />
+        </operation>
+        <operation id="" name="GetBall3" type="Ball" type-id="Ball" visibility="public" abstract="false" virtual="false" static="false">
+          <parameters />
+          <stereotypes />
+          <documentation />
+        </operation>
+        <operation id="" name="GetBall4" type="Ball" type-id="Ball" visibility="public" abstract="false" virtual="false" static="false">
+          <parameters />
+          <stereotypes />
+          <documentation />
+        </operation>
+      </operations>
+      <template-parameters />
+    </item>
+    <item id="di240816618717657869" cid="DEP001" type="dependency" name="" style-class="" is-abstract="false">
+      <stereotypes>
+        <stereotype name="use" />
+      </stereotypes>
+      <tagged-values />
+      <documentation />
+      <associated-diagrams />
+      <owned-items />
+      <style class="default" />
+    </item>
+    <item id="di832307463611437222" cid="DEP002" type="dependency" name="" style-class="" is-abstract="false">
+      <stereotypes>
+        <stereotype name="instantiate" />
+      </stereotypes>
+      <tagged-values />
+      <documentation>{\rtf1\ansi\ansicpg1252\deff0\deflang13322{\fonttbl{\f0\fnil\fcharset0 Microsoft Sans Serif;}}
+{\colortbl ;\red70\green70\blue70;}
+\viewkind4\uc1\pard\cf1\f0\fs17\par
+}
+</documentation>
+      <associated-diagrams />
+      <owned-items />
+      <style class="default" />
+    </item>
+    <item id="di737297347714393496" cid="C005" type="class" name="Ejecutable" style-class="" is-abstract="false">
+      <stereotypes />
+      <tagged-values />
+      <documentation />
+      <associated-diagrams />
+      <owned-items />
+      <style class="default" />
+      <attributes>
+        <attribute id="" name="etapa" type="EtapaState" type-id="EtapaState" visibility="private" abstract="false" virtual="false" default-value="">
+          <stereotypes />
+          <documentation />
+        </attribute>
+      </attributes>
+      <operations>
+        <operation id="" name="Ejecucion" type="" type-id="" visibility="public" abstract="false" virtual="false" static="false">
+          <parameters />
+          <stereotypes />
+          <documentation />
+        </operation>
+        <operation id="" name="DrawGameCanvas" type="" type-id="" visibility="public" abstract="false" virtual="false" static="false">
+          <parameters />
+          <stereotypes />
+          <documentation />
+        </operation>
+        <operation id="" name="SetEtapa" type="" type-id="" visibility="public" abstract="false" virtual="false" static="false">
+          <parameters />
+          <stereotypes />
+          <documentation />
+        </operation>
+      </operations>
+      <template-parameters />
+    </item>
+    <item id="di506829369450083774" cid="C007" type="class" name="EtapaState" style-class="" is-abstract="false">
+      <stereotypes />
+      <tagged-values />
+      <documentation />
+      <associated-diagrams />
+      <owned-items />
+      <style class="default" />
+      <attributes />
+      <operations />
+      <template-parameters />
+    </item>
+    <item id="di971843609830610394" cid="C008" type="class" name="Etapa1" style-class="" is-abstract="false">
+      <stereotypes>
+        <stereotype name="struct" />
+      </stereotypes>
+      <tagged-values />
+      <documentation />
+      <associated-diagrams />
+      <owned-items />
+      <style class="default" />
+      <attributes />
+      <operations />
+      <template-parameters />
+    </item>
+    <item id="di246179350853229452" cid="C009" type="class" name="Etapa1" style-class="" is-abstract="false">
+      <stereotypes />
+      <tagged-values />
+      <documentation />
+      <associated-diagrams />
+      <owned-items />
+      <style class="default" />
+      <attributes />
+      <operations />
+      <template-parameters />
+    </item>
+    <item id="di171884957551924934" cid="C009" type="class" name="Etapa2" style-class="" is-abstract="false">
+      <stereotypes />
+      <tagged-values />
+      <documentation />
+      <associated-diagrams />
+      <owned-items />
+      <style class="default" />
+      <attributes />
+      <operations />
+      <template-parameters />
+    </item>
+    <item id="di373853696989520533" cid="C009" type="class" name="Etapa3" style-class="" is-abstract="false">
+      <stereotypes />
+      <tagged-values />
+      <documentation />
+      <associated-diagrams />
+      <owned-items />
+      <style class="default" />
+      <attributes />
+      <operations />
+      <template-parameters />
+    </item>
+    <item id="di735742804930727745" cid="C010" type="class" name="EtapaState" style-class="" is-abstract="false">
+      <stereotypes>
+        <stereotype name="interface" />
+      </stereotypes>
+      <tagged-values />
+      <documentation />
+      <associated-diagrams />
+      <owned-items />
+      <style class="default" />
+      <attributes />
+      <operations>
+        <operation id="" name="Ejecucion" type="" type-id="" visibility="public" abstract="false" virtual="false" static="false">
+          <parameters />
+          <stereotypes />
+          <documentation />
+        </operation>
+      </operations>
+      <template-parameters />
+    </item>
+    <item id="di549295944455994587" cid="REA001" type="realization" name="" style-class="" is-abstract="false">
+      <stereotypes />
+      <tagged-values />
+      <documentation />
+      <associated-diagrams />
+      <owned-items />
+      <style class="default" />
+    </item>
+    <item id="di414791029961092228" cid="REA002" type="realization" name="" style-class="" is-abstract="false">
+      <stereotypes />
+      <tagged-values />
+      <documentation />
+      <associated-diagrams />
+      <owned-items />
+      <style class="default" />
+    </item>
+    <item id="di710103331302113114" cid="REA003" type="realization" name="" style-class="" is-abstract="false">
+      <stereotypes />
+      <tagged-values />
+      <documentation />
+      <associated-diagrams />
+      <owned-items />
+      <style class="default" />
+    </item>
+    <item id="di595957338342322563" cid="DEP003" type="dependency" name="" style-class="" is-abstract="false">
+      <stereotypes>
+        <stereotype name="use" />
+      </stereotypes>
+      <tagged-values />
+      <documentation />
+      <associated-diagrams />
+      <owned-items />
+      <style class="default" />
+    </item>
+    <item id="di622591310104839501" cid="REL002" type="relationship" name="" style-class="" is-abstract="false">
+      <stereotypes />
+      <tagged-values />
+      <documentation />
+      <associated-diagrams />
+      <owned-items />
+      <style class="default" />
+      <relation from="di737297347714393496" to="di735742804930727745">
+        <start-role id="" name="" multiplicity="" navigability="" association-type="association" visibility="private" />
+        <end-role id="" name="" multiplicity="" navigability="yes" association-type="association" visibility="private" />
+      </relation>
+    </item>
+    <item id="di982925875262380961" cid="C009" type="class" name="Etapa4" style-class="" is-abstract="false">
+      <stereotypes />
+      <tagged-values />
+      <documentation />
+      <associated-diagrams />
+      <owned-items />
+      <style class="default" />
+      <attributes />
+      <operations />
+      <template-parameters />
+    </item>
+    <item id="di112531624432950079" cid="REA005" type="realization" name="" style-class="" is-abstract="false">
+      <stereotypes />
+      <tagged-values />
+      <documentation />
+      <associated-diagrams />
+      <owned-items />
+      <style class="default" />
+    </item>
+  </items>
+  <models>
+    <model id="p849336059502337882" name="Model 1" type="model" namespace="">
+      <documentation />
+      <sub-models />
+      <diagram type="uml-class" id="p878473269703432172" name="ClassDiagram1">
+        <meta>
+          <authors />
+          <description />
+          <creation-date>01/03/2012 16:42:54</creation-date>
+          <change-date>01/11/2012 20:54:51</change-date>
+          <revision-count>0</revision-count>
+          <version />
+        </meta>
+        <documentation />
+        <layer name="Default" visible="true" enabled="true" locked="false">
+          <item id="di414126282262959126" show-cid="false" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" type="entity">
+            <layout ax="183" ay="141" awidth="150" aheight="170" x="183" y="141" width="0" height="0" />
+            <class />
+          </item>
+          <item id="di597820857330988183" show-cid="false" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" type="entity">
+            <layout ax="419" ay="-150" awidth="150" aheight="170" x="419" y="-150" width="0" height="0" />
+            <class />
+          </item>
+          <item id="di775903381794213648" show-cid="false" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" type="entity">
+            <layout ax="639" ay="138" awidth="150" aheight="170" x="639" y="138" width="0" height="0" />
+            <class />
+          </item>
+          <item id="di276869083361352666" show-cid="false" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" type="entity">
+            <layout ax="417" ay="139" awidth="150" aheight="170" x="417" y="139" width="0" height="0" />
+            <class />
+          </item>
+          <item id="di684747533129171721" show-cid="false" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" type="relation">
+            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" x1="327" y1="141" x2="425" y2="20">
+              <points>
+                <point x="327" y="141" />
+                <point x="425" y="20" />
+              </points>
+            </layout>
+            <relation from="di414126282262959126" to="di597820857330988183" />
+          </item>
+          <item id="di535383740394008458" show-cid="false" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" type="relation">
+            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" x1="493" y1="139" x2="493" y2="20">
+              <points>
+                <point x="493" y="139" />
+                <point x="493" y="20" />
+              </points>
+            </layout>
+            <relation from="di276869083361352666" to="di597820857330988183" />
+          </item>
+          <item id="di347830371475420305" show-cid="false" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" type="relation">
+            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" x1="649" y1="138" x2="559" y2="20">
+              <points>
+                <point x="649" y="138" />
+                <point x="559" y="20" />
+              </points>
+            </layout>
+            <relation from="di775903381794213648" to="di597820857330988183" />
+          </item>
+          <item id="di786542138504730757" show-cid="false" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" type="relation">
+            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" x1="569" y1="-65" x2="714" y2="138">
+              <points>
+                <point x="569" y="-65" />
+                <point x="714" y="-66" />
+                <point x="714" y="138" />
+              </points>
+            </layout>
+            <relation from="di597820857330988183" to="di775903381794213648" />
+            <role-positions start-role="25,15" end-role="25,15" start-multiplicity="25,-15" end-multiplicity="25,-15" />
+          </item>
+          <item id="di977149463773439850" show-cid="false" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" type="entity">
+            <layout ax="178" ay="402" awidth="150" aheight="126" x="178" y="402" width="0" height="126" />
+            <class />
+          </item>
+          <item id="di832307463611437222" show-cid="false" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" type="relation">
+            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" x1="254" y1="402" x2="256" y2="311">
+              <points>
+                <point x="254" y="402" />
+                <point x="256" y="311" />
+              </points>
+            </layout>
+            <relation from="di977149463773439850" to="di414126282262959126" />
+          </item>
+        </layer>
+      </diagram>
+      <diagram type="uml-class" id="p443131056456556902" name="ClassDiagram2">
+        <meta>
+          <authors />
+          <description />
+          <creation-date>01/03/2012 16:51:39</creation-date>
+          <change-date>01/03/2012 16:55:20</change-date>
+          <revision-count>0</revision-count>
+          <version />
+        </meta>
+        <documentation />
+        <layer name="Default" visible="true" enabled="true" locked="false">
+          <item id="di737297347714393496" show-cid="false" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" type="entity">
+            <layout ax="609" ay="128" awidth="150" aheight="170" x="609" y="128" width="0" height="0" />
+            <class />
+          </item>
+          <item id="di246179350853229452" show-cid="false" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" type="entity">
+            <layout ax="-4" ay="374" awidth="150" aheight="170" x="-4" y="374" width="0" height="0" />
+            <class />
+          </item>
+          <item id="di171884957551924934" show-cid="false" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" type="entity">
+            <layout ax="183" ay="374" awidth="150" aheight="170" x="183" y="374" width="0" height="0" />
+            <class />
+          </item>
+          <item id="di373853696989520533" show-cid="false" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" type="entity">
+            <layout ax="363" ay="374" awidth="150" aheight="170" x="363" y="374" width="0" height="0" />
+            <class />
+          </item>
+          <item id="di735742804930727745" show-cid="false" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" type="entity">
+            <layout ax="280" ay="127" awidth="150" aheight="170" x="280" y="127" width="0" height="0" />
+            <class />
+          </item>
+          <item id="di549295944455994587" show-cid="false" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" type="relation">
+            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" x1="146" y1="394" x2="280" y2="277">
+              <points>
+                <point x="146" y="394" />
+                <point x="280" y="277" />
+              </points>
+            </layout>
+            <relation from="di246179350853229452" to="di735742804930727745" />
+          </item>
+          <item id="di414791029961092228" show-cid="false" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" type="relation">
+            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" x1="291" y1="374" x2="322" y2="297">
+              <points>
+                <point x="291" y="374" />
+                <point x="322" y="297" />
+              </points>
+            </layout>
+            <relation from="di171884957551924934" to="di735742804930727745" />
+          </item>
+          <item id="di710103331302113114" show-cid="false" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" type="relation">
+            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" x1="409" y1="374" x2="384" y2="297">
+              <points>
+                <point x="409" y="374" />
+                <point x="384" y="297" />
+              </points>
+            </layout>
+            <relation from="di373853696989520533" to="di735742804930727745" />
+          </item>
+          <item id="di622591310104839501" show-cid="false" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" type="relation">
+            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" x1="609" y1="213" x2="430" y2="212">
+              <points>
+                <point x="609" y="213" />
+                <point x="430" y="212" />
+              </points>
+            </layout>
+            <relation from="di737297347714393496" to="di735742804930727745" />
+            <role-positions start-role="25,15" end-role="25,15" start-multiplicity="25,-15" end-multiplicity="25,-15" />
+          </item>
+          <item id="di982925875262380961" show-cid="false" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" type="entity">
+            <layout ax="557" ay="373" awidth="150" aheight="170" x="557" y="373" width="0" height="0" />
+            <class />
+          </item>
+          <item id="di112531624432950079" show-cid="false" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" type="relation">
+            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" x1="557" y1="391" x2="430" y2="279">
+              <points>
+                <point x="557" y="391" />
+                <point x="430" y="279" />
+              </points>
+            </layout>
+            <relation from="di982925875262380961" to="di735742804930727745" />
+          </item>
+        </layer>
+      </diagram>
+    </model>
+  </models>
+</sim-project>

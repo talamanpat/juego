@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script type="text/javascript" src="Ball.js"></script>
+        <script type="text/javascript" src="BallFactory.js"></script>
+        <script type="text/javascript" src="Pizarra.js"></script>
+        <script type="text/javascript" src="Player.js"></script>
+        <script type="text/javascript" src="Etapa1.js"></script>
+        <script type="text/javascript" src="Etapa2.js"></script>
+        <script type="text/javascript" src="Etapa3.js"></script>
+        <script type="text/javascript" src="Etapa4.js"></script>
+        <script type="text/javascript" src="Ejecutor.js"></script>
+        <script type="text/javascript" src="Init.js"></script>
+    </head>
+    <body>
+        <script>
+            var can = document.createElement('canvas');
+            can.setAttribute('id',"gameBoard");
+            can.setAttribute('width',"400");
+            can.setAttribute('height',"400");
+            can.innerHTML = 'kuek! necesitas un navegador ke soporte html5! like <a href="https://www.google.com/chrome/?brand=ECDB&installdataindex=no-apps-no-promo&hl=es" target="_blank">this!</a>';
+            document.body.appendChild( can);
+            var divpun = document.createElement('div');
+            var pun = document.createElement('span');
+            pun.setAttribute('id',"puntos");
+            divpun.innerHTML="Puntos: ";
+            pun.innerHTML="0";
+            divpun.appendChild(pun);
+            document.body.appendChild(divpun);
+            var coaj=document.createElement('div');
+            coaj.setAttribute('id',"conajax");
+            document.body.appendChild(coaj);
+            var reiniciar=document.createElement('a');
+            reiniciar.setAttribute('href',"http://desarrollo.talaman.cl/juego");
+            reiniciar.innerHTML="Reiniciar juego";
+            document.body.appendChild(reiniciar);
+            
+        </script>
+</body>
+
+</html>
